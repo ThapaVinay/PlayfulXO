@@ -1,1 +1,18 @@
-<p>board works!</p>
+<h1 class="text-center text-2xl ring-2 mt-2 p-2 w-[50%] mx-auto">Welcome to Tic Tac Toe Game !</h1>
+
+<h1>Current Player : {{Player}}</h1>
+
+<button (click)="newGame()" class="border-2 rounded-xl p-3 border-dashed m-4 border-red-400 bg-gray-200 hover:bg-gray-400"> Start New Game </button>
+
+<h2 *ngIf = "board[0].winner">
+    Player {{board[0].winner}} won the game!
+</h2>
+
+<main>
+    <app-square
+    *ngFor="let val of board[0].squares; let i = index" 
+    [value] = "val"
+    (click) = "makeMove(i)"
+    >
+    </app-square>
+</main>

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { RouterTestingHarness } from '@angular/router/testing';
 
 @Component({
   selector: 'app-square',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./square.component.scss']
 })
 export class SquareComponent {
-
+  
+  @Input() value: string = '';
 }
