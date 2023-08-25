@@ -1,10 +1,24 @@
 main {
     display: grid;
-    grid-template-columns: 200px 200px 200px;
-    grid-gap: 0px;
+    grid-template-columns: 150px 150px 150px;
+    grid-gap: 1px;
+    
 }
   
 app-square {
-    border: 1px gray solid;
-    height: 200px;
+    border: 2px gray solid;
+    height: 150px; 
+    border-radius: 10px;
+    background-color: rgb(29, 29, 95) ;
+    overflow: hidden;
 }
+
+@media screen and (max-width: 767px) {
+    main {
+      grid-template-columns: 100px 100px 100px;
+    }
+  
+    app-square {
+      height: 100px;
+    }
+  }
